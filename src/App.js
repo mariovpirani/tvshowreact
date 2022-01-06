@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Tvshow from './views/Tvshow';
+import Season from './components/seasons/Season';
+import Episodes from './components/seasons/Episodes';
+import './assets/scss/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <>
+        <Switch>
+        <Route exact path="/episode/:idSeason/:idEpisode">
+            <Episodes />
+          </Route>
+          <Route exact path="/season/:idSeason">
+            <Season />
+          </Route>
+          <Route exact path="/">
+            <Tvshow />
+          </Route>
+        </Switch>
+      </>
+    </BrowserRouter>
   );
 }
 

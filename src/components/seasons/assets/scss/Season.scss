@@ -1,0 +1,62 @@
+
+  
+.episode {
+  height: 100vh;
+  .episode-back {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(180deg, rgba(0,0,0,0.8), rgba(0,0,0,1));
+    
+  }
+  .episode-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+  }
+  .episode-name {
+      
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .episode-image{
+      text-align: right;
+      flex: 1;
+      margin: 10px;
+      width: 200px;
+  }
+  .episode-content {
+    flex: 2;
+    margin: 10px;
+  }
+  .episode-info {
+    font-size: 16px;
+  }
+  .episode-description {
+    font-size: 16px;
+    color: #fff;
+    width: 80%;
+  }
+  .episode-topics {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #fff;
+  }
+}
+
+
+
+@media (max-width: 800px) {
+    .episode-name {
+        text-align: center;
+        font-size: 30px !important;
+        margin-bottom: 20px;
+      }
+    .episode-container {
+      flex-direction: column;
+    }
+    .episode-description {
+        width: 100% !important;
+      }
+  }
